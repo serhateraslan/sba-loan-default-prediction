@@ -1,6 +1,3 @@
-# sba-loan-default-prediction
-Predicting SBA loan default risk using Decision Tree and LightGBM.
-
 # SBA Loan Repayment Prediction
 
 A binary classification project comparing a traditional single Decision Tree against a LightGBM gradient boosting model to predict SBA loan repayment outcomes on a large tabular dataset.
@@ -59,26 +56,26 @@ The dataset contains approximately **895,641** loan records after cleaning. The 
 
 ### Key Columns
 
-| Column | Description |
-|---|---|
-| `State` | State of the borrowing business |
-| `Bank` | Bank associated with the loan |
-| `BankState` | State where the bank is located |
-| `NAICS` | Industry classification code |
-| `ApprovalYear` | Year the loan was approved |
-| `Term` | Loan commitment period, in months |
-| `NoEmp` | Number of employees |
-| `NewExist` | New or existing business indicator |
-| `CreateJob` | Number of jobs created |
-| `RetainedJob` | Number of jobs retained |
-| `FranchiseCode` | Franchise information |
-| `UrbanRural` | Urban/rural classification |
-| `LowDoc` | Low-documentation loan indicator |
-| `DisbursementGross` | Gross amount disbursed |
-| `GrAppv` | Gross amount approved by the bank |
-| `SBA_Appv` | Amount approved/guaranteed by the SBA |
-| `MIS_Status` | Target variable |
-| `LoanStatus` | Loan status |
+| Column              | Description                            |
+| ------------------- | --------------------------------------- |
+| `State`             | State of the borrowing business         |
+| `Bank`              | Bank associated with the loan           |
+| `BankState`         | State where the bank is located         |
+| `NAICS`             | Industry classification code            |
+| `ApprovalYear`      | Year the loan was approved              |
+| `Term`              | Loan commitment period, in months       |
+| `NoEmp`             | Number of employees                     |
+| `NewExist`          | New or existing business indicator      |
+| `CreateJob`         | Number of jobs created                  |
+| `RetainedJob`       | Number of jobs retained                 |
+| `FranchiseCode`     | Franchise information                   |
+| `UrbanRural`        | Urban/rural classification              |
+| `LowDoc`            | Low-documentation loan indicator        |
+| `DisbursementGross` | Gross amount disbursed                  |
+| `GrAppv`            | Gross amount approved by the bank       |
+| `SBA_Appv`          | Amount approved/guaranteed by the SBA   |
+| `MIS_Status`        | Target variable                         |
+| `LoanStatus`        | Loan status                             |
 
 ---
 
@@ -123,6 +120,10 @@ pd.get_dummies()
 
 Exploratory Data Analysis (EDA) was performed on the cleaned dataset as part of the workflow, prior to encoding and model training, to support the preprocessing and modeling decisions described above.
 
+### Correlation Matrix
+
+The correlation matrix was used to examine relationships between numerical features.
+
 ---
 
 ## Modeling Approach
@@ -156,19 +157,33 @@ Both models were evaluated using the following methods and metrics:
 - Feature importance analysis
 - Direct comparison of Decision Tree vs. LightGBM results
 
+### Decision Tree Confusion Matrix
+
+### LightGBM Confusion Matrix
+
+### ROC Curve
+
+### Feature Importance
+
+The Decision Tree feature importance visualization shows the relative contribution of the most important features used by the model.
+
+### Model Performance Comparison
+
+The following visualization compares the performance of the Decision Tree and LightGBM models across the evaluated metrics.
+
 ---
 
 ## Tech Stack
 
-- **Python**
-- **pandas** — data cleaning, preprocessing, and one-hot encoding
-- **scikit-learn** — Decision Tree classification and evaluation metrics
-- **LightGBM** — gradient boosting classification
+- Python
+- pandas — data cleaning, preprocessing, and one-hot encoding
+- scikit-learn — Decision Tree classification and evaluation metrics
+- LightGBM — gradient boosting classification
 
 ---
 
 ## Project Scope and Limitations
 
-- This project was built for learning and portfolio purposes, with a deliberately narrow model comparison (Decision Tree vs. LightGBM only).
-- The raw dataset is not included in this repository due to its size.
-- No hyperparameter tuning results, performance metrics, or feature importance values are included in this document beyond what is explicitly documented in the project's code/notebooks.
+This project was built for learning and portfolio purposes, with a deliberately narrow model comparison (Decision Tree vs. LightGBM only).
+The raw dataset is not included in this repository due to its size.
+No hyperparameter tuning results, performance metrics, or feature importance values are included in this document beyond what is explicitly documented in the project's code/notebooks.
