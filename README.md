@@ -196,7 +196,7 @@ This project uses the **Should This Loan be Approved or Denied?** dataset
 created by **Mirbek Toktogaraev**.
 
 - Source: [Kaggle](https://www.kaggle.com/datasets/mirbektoktogaraev/should-this-loan-be-approved-or-denied)
-- License: **CC BY 4.0**
+- License: **CC BY-SA 4.0**
 - Dataset Creator: **Mirbek Toktogaraev**
 
 The dataset is not included in this repository.
