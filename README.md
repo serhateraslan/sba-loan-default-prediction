@@ -187,3 +187,16 @@ The following visualization compares the performance of the Decision Tree and Li
 This project was built for learning and portfolio purposes, with a deliberately narrow model comparison (Decision Tree vs. LightGBM only).
 The raw dataset is not included in this repository due to its size.
 No hyperparameter tuning results, performance metrics, or feature importance values are included in this document beyond what is explicitly documented in the project's code/notebooks.
+
+---
+
+## Dataset
+
+This project uses the **Should This Loan be Approved or Denied?** dataset
+created by **Mirbek Toktogaraev**.
+
+- Source: [Kaggle](https://www.kaggle.com/datasets/mirbektoktogaraev/should-this-loan-be-approved-or-denied)
+- License: **CC BY 4.0**
+- Dataset Creator: **Mirbek Toktogaraev**
+
+The dataset is not included in this repository.
